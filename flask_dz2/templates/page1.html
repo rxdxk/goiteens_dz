@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Flask App - Page 1</title>
+    {% from 'macros.html' import set_styles %}
+    {{ set_styles() }}
+</head>
+<body>
+    <h1>Flask:</h1>
+    <h2><i>Flask — мікрофреймворк для вебдодатків, створений з використанням Python. Його основу складає інструментарій Werkzeug та рушій шаблонів Jinja2. Поширюється відповідно до умов ліцензії BSD.</i></h2>
+
+    <p><a href="{{ url_for('index') }}">На головну сторінку.</a></p>
+</body>
+</html>
