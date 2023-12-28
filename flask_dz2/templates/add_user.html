@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add User</title>
+    {% from 'macros.html' import set_styles %}
+    {{ set_styles() }}
+</head>
+<body>
+    <h1>Додати користувача:</h1>
+    <form method="post" action="{{ url_for('add_user') }}">
+        <input type="text" name="username" placeholder="Ваше ім'я" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <button type="submit">Додати</button>
+    </form>
+    <p><a href="{{ url_for('index') }}">На головну сторінку.</a></p>
+</body>
+</html>
